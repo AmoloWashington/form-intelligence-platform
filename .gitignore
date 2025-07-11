@@ -1,0 +1,10 @@
+env
+*.pyc
+__pycache__/
+env/
+secrets.toml
+*.log
+formAI.py
+intellgent.py
+form_intelligence.py
+output/

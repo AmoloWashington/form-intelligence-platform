@@ -1,0 +1,65 @@
+{
+  "form_name": "I-539, Application to Extend/Change Nonimmigrant Status",
+  "form_id": "I-539",
+  "description": "Form I-539 is used by nonimmigrants to apply for a change of status, extend their stay, or both.",
+  "governing_authority": "U.S. Citizenship and Immigration Services (USCIS)",
+  "target_users": "Nonimmigrants in the United States seeking to extend or change their status",
+  "required_fields": [
+    {
+      "name": "Family Name",
+      "type": "Text",
+      "description": "Enter your family or last name as it appears on the supporting documentation (passport)",
+      "required": true
+    },
+    {
+      "name": "Mailing Address",
+      "type": "Text",
+      "description": "Enter your current mailing address",
+      "required": true
+    },
+    {
+      "name": "Date of Birth",
+      "type": "Date",
+      "description": "Enter your date of birth",
+      "required": true
+    },
+    {
+      "name": "Current nonimmigrant status",
+      "type": "Text",
+      "description": "Enter your current nonimmigrant status",
+      "required": true
+    },
+    {
+      "name": "Application Type",
+      "type": "Text",
+      "description": "Specify the type of application you are submitting (1., 2., or 3.a.)",
+      "required": true
+    },
+    {
+      "name": "Status Requested",
+      "type": "Text",
+      "description": "Specify the status you are requesting (3.b or 3.c)",
+      "required": true
+    },
+    {
+      "name": "Total number of People Included in This Application",
+      "type": "Number",
+      "description": "Enter the total number of people included in this application",
+      "required": true
+    }
+  ],
+  "supporting_documents": [
+    "Form I-94, Nonimmigrant Arrival-Departure Record",
+    "Form I-20, Certificate of Eligibility for Nonimmigrant Student Status",
+    "Form I-129, Petition for a Nonimmigrant Worker",
+    "Form I-797 Receipt Notice",
+    "Form I-821, Application for Temporary Protected Status"
+  ],
+  "submission_method": "Electronic filing via USCIS website or mail",
+  "frequency_or_deadline": "Case-specific, must be submitted before current status expires",
+  "official_source_url": "https://www.uscis.gov/i-539",
+  "notes_or_instructions": "Ensure to complete all sections of the form. Retain a copy of your application and supporting documents for your records. Use the current version of the form. USCIS will reject an application filed on an obsolete version of the form.",
+  "created_at": "2025-07-11T12:25:49.866290",
+  "last_updated": "2025-07-11T12:25:49.866290",
+  "validation_status": "extracted"
+}

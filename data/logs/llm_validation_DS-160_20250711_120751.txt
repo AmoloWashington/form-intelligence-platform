@@ -1,0 +1,35 @@
+Operation: validation
+Form: DS-160
+Timestamp: 20250711_120751
+Response:
+{
+    "validation_passed": false,
+    "issues_found": [
+        {
+            "field": "Photo",
+            "issue": "Incorrect field type",
+            "severity": "high",
+            "suggestion": "Change field type to 'file' for photo uploads"
+        },
+        {
+            "field": "Passport",
+            "issue": "Incorrect field type",
+            "severity": "high",
+            "suggestion": "Change field type to 'file' for passport uploads"
+        },
+        {
+            "field": "supporting_documents",
+            "issue": "Missing supporting document",
+            "severity": "medium",
+            "suggestion": "Add 'Photo' to the list of supporting documents"
+        },
+        {
+            "field": "submission_method",
+            "issue": "Unclear submission method",
+            "severity": "low",
+            "suggestion": "Specify the exact URL or page on the U.S. Department of State's website where the form should be submitted"
+        }
+    ],
+    "overall_assessment": "The form metadata has several issues that need to be addressed, particularly with the field types for 'Photo' and 'Passport', and the missing 'Photo' in the supporting documents. The submission method could also be clearer.",
+    "completeness_score": 75
+}

@@ -1,0 +1,79 @@
+{
+  "query": "What are the required fields, field types, supporting documents, official submission method, \n                   governing authority, target users, and submission deadlines for the i-539 form? \n                   Include official source URLs and detailed instructions.",
+  "follow_up_questions": null,
+  "answer": "The i-539 form requires completion of all fields, including personal information and current status details. Submit via mail or online before expiration. The governing authority is USCIS. Deadlines vary by case.",
+  "images": [],
+  "results": [
+    {
+      "url": "https://www.uscis.gov/i-539",
+      "title": "I-539, Application to Extend/Change Nonimmigrant Status - USCIS",
+      "content": "Submit your Form I-539 application for an extension or change of status by mail or you can file online before the expiration date as shown",
+      "score": 0.98551,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-539instr.pdf",
+      "title": "[PDF] Form I-539, Instructions for Application to Extend/Change ... - USCIS",
+      "content": "Form I-693, Report of Medical Examination and Vaccination Record, (without the vaccination supplement) which is only required for Form I-539 initial filings.",
+      "score": 0.98537,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.motaword.com/blog/i-539-application-to-extend-change-nonimmigrant-status",
+      "title": "USCIS Form I-539: Everything You Need to Know - MotaWord",
+      "content": "USCIS Form I-539 is used by nonimmigrants in the United States to request an extension of their stay or a change in their nonimmigrant status.",
+      "score": 0.98032,
+      "raw_content": null
+    },
+    {
+      "url": "https://bechtel.stanford.edu/completing-form-i-539-extending-or-changing-h-4-status",
+      "title": "Completing Form I-539: Extending or Changing to H-4 Status",
+      "content": "The fields are structured to accommodate US-type addresses; if your address abroad can fit in that format, go ahead and add it here. Addresses",
+      "score": 0.9773,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.aila.org/File/Related/20052032a.pdf",
+      "title": "[PDF] INSTRUCTIONS Instructions for Form I-539 Application to Extend ...",
+      "content": "You must submit an application for extension of stay or change of status before your current authorized stay expires. Even if you are approved",
+      "score": 0.97552,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.nolo.com/legal-encyclopedia/filling-out-form-i-539-extend-nonimmigrant-visa.html",
+      "title": "Filling Out Form I-539 to Extend Nonimmigrant Status - Nolo",
+      "content": "Line-by-line instructions for filling out the Application to Extend/Change Nonimmigrant Status if you need or want to stay in the U.S. longer.",
+      "score": 0.97496,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.hccs.edu/media/houston-community-college/international-students/pdfs/Form-I-539-Change-of-Status-sample.pdf",
+      "title": "[PDF] Form-I-539-Change-of-Status-sample.pdf",
+      "content": "Form I-539 is a fillable PDF form. Type the information into the form using a computer. If there are fields that you cannot type into, change the internet",
+      "score": 0.97223,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.wichita.edu/admissions/international/current_students/ChangeofStatus_Filing_Guidebook.pdf",
+      "title": "[PDF] Online Change of Status Form I-539 Filing Guidebook",
+      "content": "These fields have character limits. Enter as much of your name as possible. Utilize the middle name field if your given name exeeds the character limit.",
+      "score": 0.97033,
+      "raw_content": null
+    },
+    {
+      "url": "https://bechtel.stanford.edu/completing-form-i-539-changing-h-1b-f-1-or-j-1-status",
+      "title": "Completing Form I-539: Changing from H-1B to F-1 or J-1 Status",
+      "content": "These guidelines are specifically intended to assist affiliates of Stanford University in H-1 status seeking a change to F-1 or J-1 status.",
+      "score": 0.96328,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.aila.org/File/Related/19050634ax.pdf",
+      "title": "[PDF] Instructions for Supplement A to Form I-539",
+      "content": "You must submit all fees in the exact amounts. Use the following guidelines when you prepare your checks or money orders for the Form I-539 filing fee and.",
+      "score": 0.96308,
+      "raw_content": null
+    }
+  ],
+  "response_time": 1.03
+}

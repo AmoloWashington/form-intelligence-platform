@@ -1,0 +1,57 @@
+Operation: extraction
+Form: DS-160
+Timestamp: 20250710_173926
+Response:
+{
+    "form_name": "DS-160",
+    "form_id": "DS-160",
+    "description": "The DS-160, Online Nonimmigrant Visa Application form, is for temporary travel to the United States, and for K (fiancé(e)) visas. Form DS-160 is submitted electronically to the Department of State website via the Internet. Consular Officers use the information entered on the DS-160 to process the visa application and, combined with a personal interview, determine an applicant’s eligibility for a nonimmigrant visa.",
+    "governing_authority": "U.S. Department of State",
+    "target_users": "All nonimmigrant visa applicants",
+    "required_fields": [
+        {
+            "name": "Photo",
+            "type": "Image",
+            "description": "A recent photo of the applicant",
+            "required": true
+        },
+        {
+            "name": "Passport",
+            "type": "Document",
+            "description": "Valid passport of the applicant",
+            "required": true
+        },
+        {
+            "name": "Travel itinerary",
+            "type": "Document",
+            "description": "Details such as planned travel dates and accommodations",
+            "required": true
+        },
+        {
+            "name": "U.S. contact information",
+            "type": "Text",
+            "description": "A U.S.-based person or organization’s name, address, and phone number",
+            "required": true
+        },
+        {
+            "name": "Employment history",
+            "type": "Text",
+            "description": "Current and previous employment details, including employer names, addresses, and job titles",
+            "required": true
+        },
+        {
+            "name": "Educational background",
+            "type": "Text",
+            "description": "Information on educational institutions attended and degrees earned",
+            "required": true
+        }
+    ],
+    "supporting_documents": ["Passport", "Travel itinerary", "U.S. contact information", "Employment history", "Educational background"],
+    "submission_method": "Online via the U.S. Department of State's website",
+    "frequency_or_deadline": "Varies by embassy; check local processing times",
+    "official_source_url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/forms/ds-160-online-nonimmigrant-visa-application.html",
+    "notes_or_instructions": "The DS-160 form must be submitted online via the U.S. Department of State's website, with no supporting documents required at submission; print the confirmation page.",
+    "created_at": "2025-07-10T17:38:54.662343",
+    "last_updated": "2025-07-10T17:38:54.662343",
+    "validation_status": "extracted"
+}

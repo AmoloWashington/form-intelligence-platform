@@ -1,0 +1,33 @@
+Operation: extraction
+Form: i-539
+Timestamp: 20250711_120344
+Response:
+{
+    "form_name": "I-539, Application to Extend/Change Nonimmigrant Status",
+    "form_id": "i-539",
+    "description": "Form used by nonimmigrants in the United States to request an extension of their stay or a change in their nonimmigrant status.",
+    "governing_authority": "USCIS",
+    "target_users": "Nonimmigrants in the United States",
+    "required_fields": [
+        {
+            "name": "Personal Information",
+            "type": "string",
+            "description": "Personal details of the applicant",
+            "required": true
+        },
+        {
+            "name": "Current Status Details",
+            "type": "string",
+            "description": "Details of the applicant's current nonimmigrant status",
+            "required": true
+        }
+    ],
+    "supporting_documents": ["Form I-693, Report of Medical Examination and Vaccination Record"],
+    "submission_method": "Mail or online",
+    "frequency_or_deadline": "Before the expiration of current authorized stay",
+    "official_source_url": "https://www.uscis.gov/i-539",
+    "notes_or_instructions": "Submit an application for extension of stay or change of status before your current authorized stay expires. Even if you are approved, you must submit all fees in the exact amounts.",
+    "created_at": "2025-07-11T12:03:29.085280",
+    "last_updated": "2025-07-11T12:03:29.085280",
+    "validation_status": "extracted"
+}

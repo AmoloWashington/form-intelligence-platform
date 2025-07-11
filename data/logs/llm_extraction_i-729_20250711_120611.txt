@@ -1,0 +1,27 @@
+Operation: extraction
+Form: i-729
+Timestamp: 20250711_120611
+Response:
+{
+    "form_name": "Form I-129",
+    "form_id": "I-129",
+    "description": "Petition for Nonimmigrant Worker",
+    "governing_authority": "U.S. Citizenship and Immigration Services (USCIS)",
+    "target_users": "U.S. employers and certain foreign employers seeking to classify an alien in any nonimmigrant classification",
+    "required_fields": [
+        {
+            "name": "Declaration, Signature, and Contact Information of Petitioner or Authorized Signatory",
+            "type": "Text",
+            "description": "The petitioner or authorized signatory must declare, sign, and provide contact information. They must also confirm that all information in the form and supporting documents is complete, true, and correct.",
+            "required": true
+        }
+    ],
+    "supporting_documents": ["Evidence and supporting documents as required for the specific nonimmigrant classification"],
+    "submission_method": "USCIS website",
+    "frequency_or_deadline": "Varies by petition type",
+    "official_source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-129.pdf",
+    "notes_or_instructions": "Each petition must be accompanied by the appropriate filing fees. Submit legible photocopies of requested documents unless the Instructions specifically instruct you to submit an original document. USCIS may request an original document at any time during the process.",
+    "created_at": "2025-07-11T12:05:53.423845",
+    "last_updated": "2025-07-11T12:05:53.423845",
+    "validation_status": "extracted"
+}
