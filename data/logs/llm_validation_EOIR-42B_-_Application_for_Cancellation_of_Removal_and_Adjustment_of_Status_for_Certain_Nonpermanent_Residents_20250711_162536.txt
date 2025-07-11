@@ -1,0 +1,10 @@
+Operation: validation
+Form: EOIR-42B - Application for Cancellation of Removal and Adjustment of Status for Certain Nonpermanent Residents
+Timestamp: 20250711_162536
+Response:
+{
+    "validation_passed": true,
+    "issues_found": [],
+    "overall_assessment": "The form metadata is complete and well-structured. All required fields are present and correctly described. The supporting documents are clearly listed and the submission method is specified. The frequency or deadline for submission is also provided. The official source URL is valid and the notes or instructions are clear and informative.",
+    "completeness_score": 100
+}

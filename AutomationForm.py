@@ -307,16 +307,12 @@ def save_form_data(form_data):
 def export_to_excel(form_data):
     """Export form data to Excel format and return bytes"""
     try:
-        # Create Excel file in memory
         output = io.BytesIO()
         
-        # Create workbook and worksheets
         workbook = xlsxwriter.Workbook(output, {'in_memory': True})
         
-        # Main form info worksheet
         main_sheet = workbook.add_worksheet('Form Information')
-        
-        # Header format
+       
         header_format = workbook.add_format({
             'bold': True,
             'font_size': 14,
@@ -324,14 +320,12 @@ def export_to_excel(form_data):
             'border': 1
         })
         
-        # Data format
         data_format = workbook.add_format({
             'text_wrap': True,
             'valign': 'top',
             'border': 1
         })
         
-        # Write main form information
         row = 0
         main_sheet.write(row, 0, 'Field', header_format)
         main_sheet.write(row, 1, 'Value', header_format)
@@ -342,23 +336,19 @@ def export_to_excel(form_data):
                 main_sheet.write(row, 0, key.replace('_', ' ').title(), data_format)
                 main_sheet.write(row, 1, str(value), data_format)
         
-        # Required fields worksheet
         if form_data.get('required_fields'):
             fields_sheet = workbook.add_worksheet('Required Fields')
             
-            # Headers
             headers = ['Field Name', 'Type', 'Description', 'Required']
             for col, header in enumerate(headers):
                 fields_sheet.write(0, col, header, header_format)
             
-            # Data
             for row, field in enumerate(form_data['required_fields'], 1):
                 fields_sheet.write(row, 0, field.get('name', ''), data_format)
                 fields_sheet.write(row, 1, field.get('type', ''), data_format)
                 fields_sheet.write(row, 2, field.get('description', ''), data_format)
                 fields_sheet.write(row, 3, str(field.get('required', False)), data_format)
         
-        # Supporting documents worksheet
         if form_data.get('supporting_documents'):
             docs_sheet = workbook.add_worksheet('Supporting Documents')
             
@@ -367,17 +357,14 @@ def export_to_excel(form_data):
             for row, doc in enumerate(form_data['supporting_documents'], 1):
                 docs_sheet.write(row, 0, doc, data_format)
         
-        # Adjust column widths
         main_sheet.set_column(0, 0, 25)
         main_sheet.set_column(1, 1, 50)
         
         workbook.close()
-        
-        # Get the Excel file content
+       
         excel_data = output.getvalue()
         output.close()
         
-        # Also save to file system for backup
         form_id = form_data.get("form_id", "").replace(" ", "_").replace("/", "_")
         if not form_id:
             form_id = form_data.get("form_name", "unknown").replace(" ", "_").replace("/", "_")
@@ -396,30 +383,35 @@ def export_to_pdf(form_data):
     """Export form data to PDF format and return bytes"""
     try:
         # Create PDF in memory
-        output = io.BytesIO()
+        pdf_buffer = io.BytesIO()
         
-        # Create PDF document
-        doc = SimpleDocTemplate(output, pagesize=letter)
-        styles = getSampleStyleSheet()
-        story = []
+        # Create PDF document with explicit variable name to avoid conflicts
+        pdf_document = SimpleDocTemplate(pdf_buffer, pagesize=letter)
+        pdf_styles = getSampleStyleSheet()
+        pdf_story = []
         
         # Title
         title_style = ParagraphStyle(
             'CustomTitle',
-            parent=styles['Heading1'],
+            parent=pdf_styles['Heading1'],
             fontSize=18,
             spaceAfter=30,
             textColor=colors.darkblue
         )
         
-        story.append(Paragraph(f"Form Information: {form_data.get('form_name', 'Unknown')}", title_style))
-        story.append(Spacer(1, 12))
+        form_name = form_data.get('form_name', 'Unknown Form')
+        pdf_story.append(Paragraph(f"Form Information: {form_name}", title_style))
+        pdf_story.append(Spacer(1, 12))
         
         # Main form information
         main_data = []
         for key, value in form_data.items():
             if key not in ['required_fields', 'supporting_documents'] and value:
-                main_data.append([key.replace('_', ' ').title(), str(value)])
+                display_key = key.replace('_', ' ').title()
+                display_value = str(value)
+                # Escape special characters for ReportLab
+                display_value = display_value.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+                main_data.append([display_key, display_value])
         
         if main_data:
             main_table = Table(main_data, colWidths=[2*inch, 4*inch])
@@ -433,22 +425,22 @@ def export_to_pdf(form_data):
                 ('BACKGROUND', (0, 0), (0, -1), colors.grey),
                 ('GRID', (0, 0), (-1, -1), 1, colors.black)
             ]))
-            story.append(main_table)
-            story.append(Spacer(1, 20))
+            pdf_story.append(main_table)
+            pdf_story.append(Spacer(1, 20))
         
         # Required fields
         if form_data.get('required_fields'):
-            story.append(Paragraph("Required Fields", styles['Heading2']))
-            story.append(Spacer(1, 12))
+            pdf_story.append(Paragraph("Required Fields", pdf_styles['Heading2']))
+            pdf_story.append(Spacer(1, 12))
             
             fields_data = [['Field Name', 'Type', 'Description', 'Required']]
             for field in form_data['required_fields']:
-                fields_data.append([
-                    field.get('name', ''),
-                    field.get('type', ''),
-                    field.get('description', ''),
-                    str(field.get('required', False))
-                ])
+                field_name = str(field.get('name', '')).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+                field_type = str(field.get('type', '')).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+                field_desc = str(field.get('description', '')).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+                field_required = str(field.get('required', False))
+                
+                fields_data.append([field_name, field_type, field_desc, field_required])
             
             fields_table = Table(fields_data, colWidths=[1.5*inch, 1*inch, 2.5*inch, 1*inch])
             fields_table.setStyle(TableStyle([
@@ -461,38 +453,40 @@ def export_to_pdf(form_data):
                 ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
                 ('GRID', (0, 0), (-1, -1), 1, colors.black)
             ]))
-            story.append(fields_table)
-            story.append(Spacer(1, 20))
+            pdf_story.append(fields_table)
+            pdf_story.append(Spacer(1, 20))
         
         # Supporting documents
         if form_data.get('supporting_documents'):
-            story.append(Paragraph("Supporting Documents", styles['Heading2']))
-            story.append(Spacer(1, 12))
+            pdf_story.append(Paragraph("Supporting Documents", pdf_styles['Heading2']))
+            pdf_story.append(Spacer(1, 12))
             
             for doc in form_data['supporting_documents']:
-                story.append(Paragraph(f"• {doc}", styles['Normal']))
-            story.append(Spacer(1, 12))
+                safe_doc = str(doc).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+                pdf_story.append(Paragraph(f"• {safe_doc}", pdf_styles['Normal']))
+            pdf_story.append(Spacer(1, 12))
         
-        # Build PDF
-        doc.build(story)
+        # Build PDF with explicit document reference
+        pdf_document.build(pdf_story)
         
         # Get the PDF content
-        pdf_data = output.getvalue()
-        output.close()
+        pdf_data = pdf_buffer.getvalue()
+        pdf_buffer.close()
         
         # Also save to file system for backup
         form_id = form_data.get("form_id", "").replace(" ", "_").replace("/", "_")
         if not form_id:
             form_id = form_data.get("form_name", "unknown").replace(" ", "_").replace("/", "_")
         
-        filename = f"data/exports/pdf/{form_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
-        with open(filename, 'wb') as f:
+        backup_filename = f"data/exports/pdf/{form_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+        with open(backup_filename, 'wb') as f:
             f.write(pdf_data)
         
-        return pdf_data, filename
+        return pdf_data, backup_filename
         
     except Exception as e:
         st.error(f"Failed to export to PDF: {str(e)}")
+        st.error(f"Error details: {traceback.format_exc()}")
         return None, None
 
 def display_editable_form(form_data):
@@ -530,13 +524,15 @@ def display_editable_form(form_data):
     if st.button("➕ Add New Field"):
         form_data["required_fields"].append({
             "name": "",
-            "type": "",
+            "type": "text",
             "description": "",
             "required": True
         })
     
     # Edit existing fields
     fields_to_remove = []
+    field_types = ["text", "number", "date", "email", "phone", "checkbox", "select", "textarea"]
+    
     for i, field in enumerate(form_data["required_fields"]):
         with st.expander(f"Field {i+1}: {field.get('name', 'Unnamed')}"):
             col1, col2, col3 = st.columns([2, 1, 1])
@@ -546,10 +542,17 @@ def display_editable_form(form_data):
                 field["description"] = st.text_input(f"Description {i+1}", value=field.get("description", ""), key=f"field_desc_{i}")
             
             with col2:
-                field["type"] = st.selectbox(f"Type {i+1}",
-                                           ["text", "number", "date", "email", "phone", "checkbox", "select", "textarea"],
-                                          index=0 if field.get("type") == "" else ["text", "number", "date", "email", "phone", "checkbox", "select", "textarea"].index(field.get("type", "text")),
-                                          key=f"field_type_{i}")
+                # Fix the field type selection issue
+                current_type = field.get("type", "text")
+                if current_type not in field_types:
+                    current_type = "text"  # Default to text if type is not in list
+                
+                field["type"] = st.selectbox(
+                    f"Type {i+1}",
+                    field_types,
+                    index=field_types.index(current_type),
+                    key=f"field_type_{i}"
+                )
             
             with col3:
                 field["required"] = st.checkbox(f"Required {i+1}", value=field.get("required", True), key=f"field_req_{i}")

@@ -1,0 +1,47 @@
+Operation: extraction
+Form: eoir-42b
+Timestamp: 20250711_162418
+Response:
+{
+    "form_name": "EOIR-42B - Application for Cancellation of Removal and Adjustment of Status for Certain Nonpermanent Residents",
+    "form_id": "EOIR-42B",
+    "description": "Form EOIR-42B is used by nonpermanent residents facing deportation to seek relief by addressing specific situations. The form requires truthful answers and supporting documents.",
+    "governing_authority": "U.S. Department of Justice, Executive Office for Immigration Review",
+    "target_users": "Nonpermanent residents facing deportation",
+    "required_fields": [
+        {
+            "name": "Present true name",
+            "type": "string",
+            "description": "The current legal name of the applicant",
+            "required": true
+        },
+        {
+            "name": "Name given at birth",
+            "type": "string",
+            "description": "The name given to the applicant at birth",
+            "required": true
+        },
+        {
+            "name": "Alien Registration",
+            "type": "string",
+            "description": "The Alien Registration number of the applicant",
+            "required": true
+        }
+    ],
+    "supporting_documents": [
+        "Original Form EOIR-42B with all supporting documents and additional sheets",
+        "Copy of the USCIS ASC notice of fee receipt and biometrics appointment instructions",
+        "Copy of the Biographical Information Form G-325A",
+        "Photograph of the applicant that meets the requirements of the form",
+        "Proof of physical presence",
+        "Evidence of good moral character",
+        "Documents demonstrating the exceptional and extremely unusual hardship your qualifying relative would face if you were removed"
+    ],
+    "submission_method": "Submit to the appropriate Immigration Court",
+    "frequency_or_deadline": "Typically 30 days before the hearing",
+    "official_source_url": "https://www.justice.gov/eoir/page/file/904291/dl?inline=",
+    "notes_or_instructions": "Ensure the application is fully and accurately completed, as false information may lead to denial or criminal prosecution. A $100 filing fee is required.",
+    "created_at": "2025-07-11T16:23:52.185550",
+    "last_updated": "2025-07-11T16:23:52.185550",
+    "validation_status": "extracted"
+}

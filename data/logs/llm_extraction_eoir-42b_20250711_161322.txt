@@ -1,0 +1,48 @@
+Operation: extraction
+Form: eoir-42b
+Timestamp: 20250711_161322
+Response:
+{
+    "form_name": "EOIR-42B - Application for Cancellation of Removal and Adjustment of Status for Certain Nonpermanent Residents",
+    "form_id": "EOIR-42B",
+    "description": "Form EOIR-42B is important for nonpermanent residents facing deportation. It helps individuals seek relief by addressing specific situations. The form requires truthful answers and supporting documents. The U.S. Department of Justice governs it.",
+    "governing_authority": "U.S. Department of Justice",
+    "target_users": "Nonpermanent residents facing deportation",
+    "required_fields": [
+        {
+            "name": "Present true name",
+            "type": "string",
+            "description": "The current legal name of the applicant",
+            "required": true
+        },
+        {
+            "name": "Name given at birth",
+            "type": "string",
+            "description": "The name given to the applicant at birth",
+            "required": true
+        },
+        {
+            "name": "Alien Registration",
+            "type": "string",
+            "description": "The Alien Registration number of the applicant",
+            "required": true
+        }
+    ],
+    "supporting_documents": [
+        "Original Form EOIR-42B",
+        "All supporting documents and additional sheets",
+        "Copy of the USCIS ASC notice of fee receipt and biometrics appointment instructions",
+        "Copy of the Biographical Information Form G-325A",
+        "Photograph of the applicant",
+        "Proof of physical presence",
+        "Proof of good moral character",
+        "Proof of hardship"
+    ],
+    "submission_method": "Submit to the appropriate Immigration Court",
+    "frequency_or_deadline": "Typically 30 days before the hearing",
+    "official_source_url": "https://www.justice.gov/eoir/page/file/904291/dl?inline=",
+    "notes_or_instructions": "Ensure the application is fully and accurately completed, as false information may lead to denial or criminal prosecution. Gather necessary supporting documents, including proof of physical presence, good moral character, and hardship.",
+    "created_at": "2025-07-11T16:12:59.255124",
+    "last_updated": "2025-07-11T16:12:59.255124",
+    "validation_status": "extracted"
+}

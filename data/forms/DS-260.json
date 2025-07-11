@@ -1,0 +1,41 @@
+{
+  "form_name": "DS-260 Form",
+  "form_id": "DS-260",
+  "description": "The DS-260 form, also known as the Immigrant Visa Application, is an online form used by individuals applying for a US immigrant visa from a US embassy or consulate abroad. It collects personal, travel, and background information from individuals seeking U.S. immigrant visas and submits it electronically to the U.S. Department of State to assess eligibility for permanent residency.",
+  "governing_authority": "U.S. Department of State",
+  "target_users": "Individuals applying for U.S. immigrant visas from abroad",
+  "required_fields": [
+    {
+      "name": "Personal Information",
+      "type": "text",
+      "description": "Personal details of the applicant",
+      "required": true
+    },
+    {
+      "name": "Travel Information",
+      "type": "text",
+      "description": "Travel history and plans of the applicant",
+      "required": true
+    },
+    {
+      "name": "Background Information",
+      "type": "text",
+      "description": "Background information of the applicant",
+      "required": true
+    }
+  ],
+  "supporting_documents": [
+    "Birth certificate",
+    "Passport",
+    "Marriage certificate",
+    "Divorce decree",
+    "Police certificate(s)"
+  ],
+  "submission_method": "Online through the Consular Electronic Application Center (CEAC) website",
+  "frequency_or_deadline": "When processing begins",
+  "official_source_url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/forms/online-immigrant-visa-forms/ds-260-faqs.html",
+  "notes_or_instructions": "All fields must be completed in English. If a field does not apply, select 'Does Not Apply'. The application will not allow you to submit a form with any mandatory fields left blank. An error message will be displayed and you will be required to complete the field before continuing.",
+  "created_at": "2025-07-11T16:17:55.755053",
+  "last_updated": "2025-07-11T17:57:42.475943",
+  "validation_status": "extracted"
+}
