@@ -1,0 +1,37 @@
+Operation: validation
+Form: Form N-600, Application for Certificate of Citizenship
+Timestamp: 20250714_121044
+Response:
+{
+    "validation_passed": false,
+    "issues_found": [
+        {
+            "field": "all_fields",
+            "issue": "Missing 'section' and 'line_number' information for all fields",
+            "severity": "high",
+            "suggestion": "Add 'section' and 'line_number' information for each field to help users locate them on the form"
+        },
+        {
+            "field": "all_fields",
+            "issue": "Missing 'instructions' for all fields",
+            "severity": "high",
+            "suggestion": "Provide specific instructions for each field to guide users on what to input"
+        },
+        {
+            "field": "frequency_or_deadline",
+            "issue": "Missing frequency or deadline information",
+            "severity": "medium",
+            "suggestion": "Specify the frequency or deadline for form submission"
+        },
+        {
+            "field": "supporting_documents",
+            "issue": "Unclear if the supporting documents listed are exhaustive",
+            "severity": "low",
+            "suggestion": "Specify if the list of supporting documents is exhaustive or if additional documents may be required"
+        }
+    ],
+    "overall_assessment": "The form metadata has several missing pieces of information that are crucial for user comprehension and successful form submission. These include 'section', 'line_number', and 'instructions' for all fields, as well as frequency or deadline information.",
+    "completeness_score": 70,
+    "total_fields_found": 7,
+    "missing_fields_likely": ["Applicant's full legal name", "Applicant's date of birth", "Applicant's country of birth", "Applicant's physical address", "Applicant's marital history", "Applicant's military service information"]
+}

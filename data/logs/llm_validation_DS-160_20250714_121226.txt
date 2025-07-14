@@ -1,0 +1,31 @@
+Operation: validation
+Form: DS-160
+Timestamp: 20250714_121226
+Response:
+{
+    "validation_passed": false,
+    "issues_found": [
+        {
+            "field": "Photo",
+            "issue": "Incorrect field type",
+            "severity": "high",
+            "suggestion": "Change field type to 'file' or 'image' to allow users to upload a photo"
+        },
+        {
+            "field": "Passport",
+            "issue": "Incorrect field type",
+            "severity": "medium",
+            "suggestion": "Change field type to 'file' to allow users to upload a passport"
+        },
+        {
+            "field": "supporting_documents",
+            "issue": "Mismatch between form fields and supporting documents",
+            "severity": "low",
+            "suggestion": "Ensure all supporting documents are represented as form fields"
+        }
+    ],
+    "overall_assessment": "The form metadata has some issues that need to be addressed. The 'Photo' and 'Passport' fields have incorrect types, and there is a mismatch between the form fields and the supporting documents. Once these issues are addressed, the form metadata should be valid.",
+    "completeness_score": 85,
+    "total_fields_found": 6,
+    "missing_fields_likely": []
+}

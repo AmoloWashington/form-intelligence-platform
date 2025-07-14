@@ -1,0 +1,81 @@
+Operation: extraction
+Form: n-600
+Timestamp: 20250714_115526
+Response:
+{
+    "form_name": "Form N-600, Application for Certificate of Citizenship",
+    "form_id": "N-600",
+    "description": "Form N-600 is used by individuals seeking proof of their U.S. citizenship. It is used to apply for a Certificate of Citizenship and to document citizenship status.",
+    "governing_authority": "U.S. Citizenship and Immigration Services (USCIS)",
+    "target_users": "Individuals born outside the U.S to one or more parents who are American citizens, or individuals seeking proof of their U.S. citizenship.",
+    "all_fields": [
+        {
+            "name": "Full legal name of U.S. citizen parent",
+            "type": "text",
+            "description": "Provide your U.S. citizen mother’s or father’s full legal name.",
+            "required": true,
+            "optional": false,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        },
+        {
+            "name": "Date of birth of U.S. citizen parent",
+            "type": "date",
+            "description": "Provide the date of birth of your U.S. citizen parent.",
+            "required": true,
+            "optional": false,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        },
+        {
+            "name": "Parent's country of birth",
+            "type": "text",
+            "description": "Provide the country of birth of your U.S. citizen parent.",
+            "required": true,
+            "optional": false,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        },
+        {
+            "name": "Parent's physical address",
+            "type": "text",
+            "description": "Provide the physical address of your U.S. citizen parent.",
+            "required": true,
+            "optional": false,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        },
+        {
+            "name": "Information about U.S. citizenship",
+            "type": "text",
+            "description": "Provide information about your U.S. citizenship.",
+            "required": true,
+            "optional": false,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        },
+        {
+            "name": "Parent's marital history",
+            "type": "text",
+            "description": "Provide information about your U.S. citizen parent's marital history.",
+            "required": true,
+            "optional": false,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        }
+    ],
+    "supporting_documents": ["Birth certificate or record issued and certified by a civil authority in the country of birth", "Copy of Permanent Resident Card or Other Evidence of Citizenship"],
+    "submission_method": "Online, using an electronic application form; or By mail, using a paper application form",
+    "frequency_or_deadline": "",
+    "official_source_url": "https://www.uscis.gov/n-600",
+    "notes_or_instructions": "If you are under 18, are the child of a U.S. citizen parent, you regularly reside outside the United States, and you did not acquire U.S. citizenship at birth under INA sections 301 or 309, your U.S. citizen parent, U.S. citizen grandparent, or U.S. citizen legal guardian may need to file Form N-600K, Application for Citizenship and Issuance of Certificate Under Section 322, instead of Form N-600.",
+    "created_at": "2025-07-14T11:54:38.654168",
+    "last_updated": "2025-07-14T11:54:38.654168",
+    "validation_status": "extracted"
+}

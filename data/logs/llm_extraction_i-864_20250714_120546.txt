@@ -1,0 +1,51 @@
+Operation: extraction
+Form: i-864
+Timestamp: 20250714_120546
+Response:
+{
+    "form_name": "Affidavit of Support",
+    "form_id": "I-864",
+    "description": "A document an individual signs to accept financial responsibility for the applicant who is coming to the United States. This legally binding document ensures that an intending immigrant has adequate financial support and will not become a public charge in the United States.",
+    "governing_authority": "U.S. Citizenship and Immigration Services",
+    "target_users": "Sponsors who are accepting financial responsibility for the applicant immigrating to the United States",
+    "all_fields": [
+        {
+            "name": "Basis For Filing Affidavit of Support",
+            "type": "Checkbox",
+            "description": "The reason why the sponsor is submitting this affidavit of support",
+            "required": true,
+            "optional": false,
+            "section": "Part 1",
+            "line_number": "",
+            "instructions": "Select only one box"
+        },
+        {
+            "name": "Info about sponsor",
+            "type": "Text",
+            "description": "Information about the sponsor including proof of U.S. citizenship, U.S. national status, or lawful permanent resident status",
+            "required": true,
+            "optional": false,
+            "section": "Part 2",
+            "line_number": "",
+            "instructions": "Must include proof of your U.S. citizenship, U.S. national status, or lawful permanent resident status"
+        },
+        {
+            "name": "Info about the intending immigrant",
+            "type": "Text",
+            "description": "Information about the person (the intending immigrant) who is applying for an immigrant visa or for adjustment of status to a lawful permanent resident",
+            "required": true,
+            "optional": false,
+            "section": "Part 3",
+            "line_number": "",
+            "instructions": "If you sign Form I-864 on behalf of any person (called the intending immigrant) who is applying for an immigrant visa or for adjustment of status to a lawful permanent resident, and that intending immigrant submits Form I-864 to the U.S. Government with his or her application for an immigrant visa or adjustment of status, under INA section 213A, these actions create a contract between you and the U.S. Government"
+        }
+    ],
+    "supporting_documents": ["Proof of U.S. citizenship, U.S. national status, or lawful permanent resident status"],
+    "submission_method": "Submit via USCIS",
+    "frequency_or_deadline": "Deadline is when petition is filed",
+    "official_source_url": "https://www.uscis.gov/i-864",
+    "notes_or_instructions": "This affidavit is required for most family-based immigrants and some employment-based intending immigrants to show that they have adequate means of financial support and are not likely to rely on the US government for financial support.",
+    "created_at": "2025-07-14T12:05:12.489143",
+    "last_updated": "2025-07-14T12:05:12.489143",
+    "validation_status": "extracted"
+}

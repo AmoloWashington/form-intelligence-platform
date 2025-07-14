@@ -1,0 +1,37 @@
+Operation: validation
+Form: Form N-600, Application for Certificate of Citizenship
+Timestamp: 20250714_120901
+Response:
+{
+    "validation_passed": false,
+    "issues_found": [
+        {
+            "field": "all_fields",
+            "issue": "One of the fields is missing a name, description, and instructions.",
+            "severity": "high",
+            "suggestion": "Provide a name, description, and instructions for the missing field."
+        },
+        {
+            "field": "all_fields",
+            "issue": "The 'section' and 'line_number' attributes are empty for all fields.",
+            "severity": "medium",
+            "suggestion": "Include 'section' and 'line_number' information for each field to provide better context."
+        },
+        {
+            "field": "frequency_or_deadline",
+            "issue": "The 'frequency_or_deadline' attribute is missing.",
+            "severity": "high",
+            "suggestion": "Include information about the frequency or deadline for form submission."
+        },
+        {
+            "field": "supporting_documents",
+            "issue": "There might be additional supporting documents required, such as proof of parent's U.S. citizenship.",
+            "severity": "medium",
+            "suggestion": "Review and include all necessary supporting documents."
+        }
+    ],
+    "overall_assessment": "The form metadata has several issues that need to be addressed, including missing field information, missing frequency or deadline information, and potentially missing supporting documents.",
+    "completeness_score": 70,
+    "total_fields_found": 8,
+    "missing_fields_likely": ["Applicant's full legal name", "Applicant's date of birth", "Applicant's country of birth", "Applicant's physical address"]
+}

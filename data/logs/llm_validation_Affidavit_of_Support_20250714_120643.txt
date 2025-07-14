@@ -1,0 +1,37 @@
+Operation: validation
+Form: Affidavit of Support
+Timestamp: 20250714_120643
+Response:
+{
+    "validation_passed": false,
+    "issues_found": [
+        {
+            "field": "all_fields",
+            "issue": "Missing line_number for all fields",
+            "severity": "medium",
+            "suggestion": "Add line_number for each field for better tracking and reference"
+        },
+        {
+            "field": "supporting_documents",
+            "issue": "Only one supporting document mentioned. There might be more required documents not listed",
+            "severity": "high",
+            "suggestion": "Review and add all necessary supporting documents"
+        },
+        {
+            "field": "submission_method",
+            "issue": "Unclear submission method. 'Submit via USCIS' is not specific enough",
+            "severity": "medium",
+            "suggestion": "Specify the exact method of submission (e.g., online, by mail, in person)"
+        },
+        {
+            "field": "frequency_or_deadline",
+            "issue": "Unclear deadline information. 'Deadline is when petition is filed' is not specific enough",
+            "severity": "high",
+            "suggestion": "Specify the exact deadline or frequency of submission"
+        }
+    ],
+    "overall_assessment": "The form metadata has several issues that need to be addressed for better clarity and completeness. The most critical issues are the lack of specific deadline information and potentially missing supporting documents.",
+    "completeness_score": 70,
+    "total_fields_found": 3,
+    "missing_fields_likely": ["Sponsor's financial information", "Intending immigrant's financial information", "Relationship between sponsor and intending immigrant"]
+}
