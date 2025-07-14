@@ -4,44 +4,6 @@
   "description": "The DS-160, Online Nonimmigrant Visa Application form, is for temporary travel to the United States, and for K (fiancé(e)) visas. Form DS-160 is submitted electronically to the Department of State website via the Internet. Consular Officers use the information entered on the DS-160 to process the visa application and, combined with a personal interview, determine an applicant’s eligibility for a nonimmigrant visa.",
   "governing_authority": "U.S. Department of State",
   "target_users": "All nonimmigrant visa applicants",
-  "required_fields": [
-    {
-      "name": "Photo",
-      "type": "text",
-      "description": "A recent photo of the applicant",
-      "required": true
-    },
-    {
-      "name": "Passport",
-      "type": "text",
-      "description": "Valid passport of the applicant",
-      "required": true
-    },
-    {
-      "name": "Travel itinerary",
-      "type": "text",
-      "description": "Details such as planned travel dates and accommodations",
-      "required": true
-    },
-    {
-      "name": "U.S. contact information",
-      "type": "text",
-      "description": "A U.S.-based person or organization’s name, address, and phone number",
-      "required": true
-    },
-    {
-      "name": "Employment history",
-      "type": "text",
-      "description": "Current and previous employment details, including employer names, addresses, and job titles",
-      "required": true
-    },
-    {
-      "name": "Educational background",
-      "type": "text",
-      "description": "Information on educational institutions attended and degrees earned",
-      "required": true
-    }
-  ],
   "supporting_documents": [
     "Passport",
     "Travel itinerary",
@@ -54,6 +16,69 @@
   "official_source_url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/forms/ds-160-online-nonimmigrant-visa-application.html",
   "notes_or_instructions": "The DS-160 form must be submitted online via the U.S. Department of State's website, with no supporting documents required at submission; print the confirmation page. The U.S. Department of State governs it, and it's for all nonimmigrant visa applicants. Submission deadline varies by embassy; check local processing times.",
   "created_at": "2025-07-10T17:46:57.981117",
-  "last_updated": "2025-07-10T17:50:16.578050",
-  "validation_status": "extracted"
+  "last_updated": "2025-07-14T17:00:14.564694",
+  "validation_status": "extracted",
+  "all_fields": [
+    {
+      "name": "Photo",
+      "type": "file",
+      "description": "A recent photo of the applicant",
+      "required": true,
+      "section": "",
+      "line_number": "",
+      "optional": false,
+      "instructions": ""
+    },
+    {
+      "name": "Passport",
+      "type": "file",
+      "description": "Valid passport of the applicant",
+      "required": true,
+      "section": "",
+      "line_number": "",
+      "optional": false,
+      "instructions": ""
+    },
+    {
+      "name": "Travel itinerary",
+      "type": "text",
+      "description": "Details such as planned travel dates and accommodations",
+      "required": true,
+      "section": "",
+      "line_number": "",
+      "optional": false,
+      "instructions": ""
+    },
+    {
+      "name": "U.S. contact information",
+      "type": "text",
+      "description": "A U.S.-based person or organization’s name, address, and phone number",
+      "required": true,
+      "section": "",
+      "line_number": "",
+      "optional": false,
+      "instructions": ""
+    },
+    {
+      "name": "Employment history",
+      "type": "text",
+      "description": "Current and previous employment details, including employer names, addresses, and job titles",
+      "required": true,
+      "section": "",
+      "line_number": "",
+      "optional": false,
+      "instructions": ""
+    },
+    {
+      "name": "Educational background",
+      "type": "text",
+      "description": "Information on educational institutions attended and degrees earned",
+      "required": true,
+      "section": "",
+      "line_number": "",
+      "optional": false,
+      "instructions": ""
+    }
+  ],
+  "required_fields": []
 }

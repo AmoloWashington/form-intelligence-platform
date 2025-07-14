@@ -1,0 +1,39 @@
+Operation: extraction
+Form: i-864
+Timestamp: 20250714_172535
+Response:
+{
+    "form_name": "Affidavit of Support",
+    "form_id": "I-864",
+    "description": "The I-864 Form requires the sponsor to provide detailed information about their income, assets, and financial obligations. The sponsor's income must be at least 125% of the Federal Poverty Guidelines for their household size, except for sponsors on active duty in the U.S. Armed Forces who are sponsoring their spouse or child, in which case the income requirement is 100% of the Federal Poverty Guidelines.",
+    "governing_authority": "USCIS",
+    "target_users": "Sponsors of family-based immigrants and some employment-based immigrants",
+    "required_fields": [
+        {
+            "name": "Income",
+            "type": "Financial",
+            "description": "Detailed information about the sponsor's income",
+            "required": true
+        },
+        {
+            "name": "Assets",
+            "type": "Financial",
+            "description": "Detailed information about the sponsor's assets",
+            "required": true
+        },
+        {
+            "name": "Financial Obligations",
+            "type": "Financial",
+            "description": "Detailed information about the sponsor's financial obligations",
+            "required": true
+        }
+    ],
+    "supporting_documents": ["Tax returns", "W-2s", "Employment verification letters", "Form 1099"],
+    "submission_method": "Download Form I-864 from the USCIS website and submit it with the required supporting documents",
+    "frequency_or_deadline": "",
+    "official_source_url": "https://www.uscis.gov/i-864",
+    "notes_or_instructions": "The form must be filled out in English, using black ink. Carefully follow the instructions and ensure all information provided is correct and up to date. Do not send original documents unless specifically requested in the form instructions or applicable regulations.",
+    "created_at": "2025-07-14T17:25:11.204348",
+    "last_updated": "2025-07-14T17:25:11.204348",
+    "validation_status": "extracted"
+}

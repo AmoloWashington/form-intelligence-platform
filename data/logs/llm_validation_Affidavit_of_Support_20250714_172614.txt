@@ -1,0 +1,18 @@
+Operation: validation
+Form: Affidavit of Support
+Timestamp: 20250714_172614
+Response:
+
+{
+    "validation_passed": false,
+    "issues_found": [
+        {
+            "field": "frequency_or_deadline",
+            "issue": "Missing frequency or deadline information",
+            "severity": "high",
+            "suggestion": "Include the frequency or deadline for form submission"
+        }
+    ],
+    "overall_assessment": "The form metadata is mostly complete, but it lacks frequency or deadline information which is crucial for the form users to know when to submit the form.",
+    "completeness_score": 90
+}

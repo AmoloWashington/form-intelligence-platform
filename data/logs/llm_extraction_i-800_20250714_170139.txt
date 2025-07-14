@@ -1,0 +1,63 @@
+Operation: extraction
+Form: i-800
+Timestamp: 20250714_170139
+Response:
+{
+    "form_name": "Form I-800, Petition to Classify Convention Adoptee as an Immediate Relative",
+    "form_id": "I-800",
+    "description": "Form I-800 plays a crucial role in the international adoption process under the Department of Homeland Security's U.S. Citizenship and Immigration Services policies. It allows petitioners to control the disclosure of sensitive information to their primary adoption service provider with explicit consent.",
+    "governing_authority": "Department of Homeland Security's U.S. Citizenship and Immigration Services",
+    "target_users": "Individuals seeking to adopt a child internationally",
+    "required_fields": [
+        {
+            "name": "Family Name",
+            "type": "string",
+            "description": "Use your legal name. If you have two last names, include both and use a hyphen (-) between the names, if appropriate.",
+            "required": true
+        },
+        {
+            "name": "Given Name",
+            "type": "string",
+            "description": "Your first name",
+            "required": true
+        },
+        {
+            "name": "Middle Name",
+            "type": "string",
+            "description": "Your middle name",
+            "required": false
+        },
+        {
+            "name": "Date of Birth",
+            "type": "date",
+            "description": "Your date of birth",
+            "required": true
+        },
+        {
+            "name": "Place of Birth",
+            "type": "string",
+            "description": "Your place of birth",
+            "required": true
+        },
+        {
+            "name": "U.S. Social Security Number",
+            "type": "string",
+            "description": "Your Social Security Number",
+            "required": false
+        }
+    ],
+    "supporting_documents": [
+        "Form I-800A approval notice",
+        "Proof that the approval period has been extended",
+        "The report required under Article 16 of the Convention",
+        "Birth certificates for each sibling or other evidence that they are birth siblings",
+        "Evidence that the younger birth sibling either already has immigrated or will immigrate to the United States as your adopted child, orphan or Convention adoptee"
+    ],
+    "submission_method": "Submit to the Department of State officer who has jurisdiction of the child's application for an immigrant or nonimmigrant visa, or to the USCIS officer who has jurisdiction of the child's adjustment of status application",
+    "frequency_or_deadline": "Form I-800 must be filed before the child’s 16th birthday and before the Form I-800A approval expires",
+    "official_source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-800.pdf",
+    "notes_or_instructions": "Always keep copies of the completed form and all supporting documents for your records. Copies can help resolve disputes, confirm what was submitted, and provide a reference for future correspondence with USCIS.",
+    "created_at": "2025-07-14T17:01:03.410650",
+    "last_updated": "2025-07-14T17:01:03.410650",
+    "validation_status": "extracted"
+}

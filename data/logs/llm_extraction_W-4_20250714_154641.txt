@@ -1,0 +1,51 @@
+Operation: extraction
+Form: W-4
+Timestamp: 20250714_154641
+Response:
+{
+    "form_name": "W-4 Form",
+    "form_id": "W-4",
+    "description": "The W-4 form, or 'Employee's Withholding Certificate,' is an IRS tax document that employees fill out and submit to their employers.",
+    "governing_authority": "Internal Revenue Service (IRS)",
+    "target_users": "Employees",
+    "all_fields": [
+        {
+            "name": "Personal Information",
+            "type": "Text",
+            "description": "Personal details of the employee",
+            "required": true,
+            "optional": false,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        },
+        {
+            "name": "Dependents",
+            "type": "Text",
+            "description": "Information about dependents, if any",
+            "required": false,
+            "optional": true,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        },
+        {
+            "name": "Deductions",
+            "type": "Text",
+            "description": "Information about any deductions",
+            "required": false,
+            "optional": true,
+            "section": "",
+            "line_number": "",
+            "instructions": ""
+        }
+    ],
+    "supporting_documents": [],
+    "submission_method": "Submit to employer",
+    "frequency_or_deadline": "When starting a new job",
+    "official_source_url": "https://www.irs.gov/forms-pubs/about-form-w-4",
+    "notes_or_instructions": "Instructions are available from the IRS.",
+    "created_at": "2025-07-14T15:46:27.702664",
+    "last_updated": "2025-07-14T15:46:27.702664",
+    "validation_status": "extracted"
+}

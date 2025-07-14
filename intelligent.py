@@ -72,7 +72,7 @@ def query_tavily_api(form_name, tavily_api_key):
         url = "https://api.tavily.com/search"
         
         # Craft a comprehensive search query
-        query = f"""What are the required fields, field types, supporting documents, official submission method,
+        query = f"""What are all the required fields, field types, supporting documents, official submission method,
                     governing authority, target users, and submission deadlines for the {form_name} form?
                     Include official source URLs and detailed instructions."""
         
@@ -526,10 +526,33 @@ def display_editable_form(form_data):
                 field["description"] = st.text_input(f"Description {i+1}", value=field.get("description", ""), key=f"field_desc_{i}")
             
             with col2:
-                field["type"] = st.selectbox(f"Type {i+1}",
-                                           ["text", "number", "date", "email", "phone", "checkbox", "select", "textarea"],
-                                          index=0 if field.get("type") == "" else ["text", "number", "date", "email", "phone", "checkbox", "select", "textarea"].index(field.get("type", "text")),
-                                          key=f"field_type_{i}")
+                # Define comprehensive field types
+                field_types = [
+                    "text", "number", "date", "email", "phone", 
+                    "checkbox", "select", "textarea", "financial",
+                    "boolean", "currency", "percentage", "file",
+                    "signature", "ssn", "tax_id", "passport", "other"
+                ]
+                
+                # Get current type with fallback
+                current_type = field.get("type", "text")
+                
+                # Handle unknown types
+                if current_type not in field_types:
+                    field_types.append(current_type)
+                
+                # Get index safely
+                try:
+                    index = field_types.index(current_type)
+                except ValueError:
+                    index = 0
+                
+                field["type"] = st.selectbox(
+                    f"Type {i+1}",
+                    options=field_types,
+                    index=index,
+                    key=f"field_type_{i}"
+                )
             
             with col3:
                 field["required"] = st.checkbox(f"Required {i+1}", value=field.get("required", True), key=f"field_req_{i}")

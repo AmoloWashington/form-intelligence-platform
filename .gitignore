@@ -5,6 +5,5 @@ env/
 secrets.toml
 *.log
 formAI.py
-intellgent.py
 form_intelligence.py
 output/

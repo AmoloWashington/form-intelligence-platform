@@ -1,0 +1,30 @@
+Operation: validation
+Form: Affidavit of Support
+Timestamp: 20250714_164552
+Response:
+
+{
+    "validation_passed": false,
+    "issues_found": [
+        {
+            "field": "line_number",
+            "issue": "Missing line number for all fields",
+            "severity": "medium",
+            "suggestion": "Add line number for each field"
+        },
+        {
+            "field": "required_fields",
+            "issue": "Required fields array is empty",
+            "severity": "high",
+            "suggestion": "Add all required fields to the required_fields array"
+        },
+        {
+            "field": "submission_method",
+            "issue": "Unclear submission method",
+            "severity": "medium",
+            "suggestion": "Specify the exact method of submission via USCIS"
+        }
+    ],
+    "overall_assessment": "The form metadata has some issues that need to be addressed. The line numbers for all fields are missing, which could lead to confusion when filling out the form. The required fields array is empty, which is a major issue as it is crucial to know which fields are mandatory. The submission method is unclear and should be specified more precisely.",
+    "completeness_score": 75
+}

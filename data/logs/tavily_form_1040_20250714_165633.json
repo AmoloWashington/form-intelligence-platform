@@ -1,0 +1,79 @@
+{
+  "query": "What are the required fields, field types, supporting documents, official submission method,\n                    governing authority, target users, and submission deadlines for the form 1040 form?\n                    Include official source URLs and detailed instructions.",
+  "follow_up_questions": null,
+  "answer": "Form 1040 requires personal information, filing status, and income details. Submit by April 15, 2025. Use IRS website for the form and instructions.",
+  "images": [],
+  "results": [
+    {
+      "url": "https://www.irs.gov/instructions/i1040nr",
+      "title": "Instructions for Form 1040-NR (2024) | Internal Revenue Service",
+      "content": "Form 1040-NR.\n               Required e-filing.\n               Schedule LEP (Form 1040), Request for Change in Language Preference.\n               Alternative motor vehicle credit.\n               New clean vehicle credit.\n               Previously owned clean vehicle credit.\n               Self-employed health insurance deduction.\n               Qualified charitable distribution one-time election. [...] You will need the Instructions for Form 1040. Throughout these instructions, you are directed to go to the Instructions for Forms 1040 (also known as the Instructions for Form 1040 (and 1040-SR)) for details on how to complete a line. But, in most instances, you will need to look at whether you must take exceptions into consideration when applying those instructions. The specific exceptions for a line are listed under the instructions for the line. Some of the exceptions noted repeatedly in the [...] Line 5—Rental Real Estate, Royalties, Partnerships, S Corporations, Trusts, etc.\n               Line 6—Farm Income or (Loss)\n               Line 7—Unemployment Compensation\n               Lines 8a Through 8z—Other Income\n               Line 8a—Net Operating Loss\n               Line 8b—Gambling\n                   Exception 1.\n                   Exception 2.\n\n               Line 8c—Cancellation of Debt\n                   Exception.",
+      "score": 0.51969254,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.investopedia.com/terms/1/1040.asp",
+      "title": "Form 1040: U.S. Individual Tax Return Definition, Types, and Use",
+      "content": "Form 1040 is available on the IRS website and has two pages that must be filled out. Form 1040 can be mailed in or e-filed. Tax filers are asked for their filing status along with their personal information, such as their name, address, Social Security number (some information on one's spouse may also be needed), and the number of their dependents.\n\nThe form also asks whether the taxpayer wishes to contribute $3 to presidential campaign funds. [...] Form 1040 is the central part of tax filing for United States citizens. It is the tax form that all taxpayer financial statements eventually feed into and support tax schedules branch out of. Regardless of an individual's filing status or income, taxpayers who file taxes will complete some version of Form 1040.\n\nInternal Revenue Service. \"1040 (and 1040-SR) Instructions,\" Pages 6, 8-9.\n\nInternal Revenue Service. \"Topic No. 407, Business Income.\" [...] ## Where Can I Find Form 1040?\n\nForm 1040 is not a tax statement or form that gets distributed to taxpayers. Unlike a W-2 or 1099 statement that is mailed by an employer or party you've contracted with, Form 1040 is available for download on the IRS website. Free IRS filing platforms such as Free File Fillable Forms will provide digital copies. Some public courthouses or federal buildings in your community may offer paper copies available for pickup.",
+      "score": 0.51866865,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/instructions/i1040gi",
+      "title": "Instructions for Form 1040 (2024) | Internal Revenue Service",
+      "content": "Line 24b\n                   Line 24c\n                   Line 24d\n                   Line 24e\n                   Line 24f\n                   Line 24g\n                   Line 24h\n                   Line 24i\n                   Line 24j\n                   Line 24k\n                   Line 24z [...] Line 17m.\n                       Line 17n.\n                       Line 17o.\n                       Line 17p.\n                       Line 17q. [...] 1.   Home\n2.   Instructions\n3.    Instructions for Form 1040 (2024)",
+      "score": 0.5059329,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/pub/irs-pdf/i1040gi.pdf",
+      "title": "[PDF] 2024 Instruction 1040 - IRS",
+      "content": "File Form 1040 or 1040-SR by April 15, 2025. If you file after this date, you may have to pay interest and penalties. See Interest and Penalties, later.\nIf you were serving in, or in support of, the U.S. Armed Forces in a designa-ted combat zone or contingency opera-tion, you may be able to file later. See Pub. 3 for details.\nCAUTION ! [...] later. [...] your family, or your business.",
+      "score": 0.48528314,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/filing/gather-your-documents",
+      "title": "Gather your documents | Internal Revenue Service",
+      "content": "Forms & Instructions\n    \n\n       Overview\n\n       POPULAR FORMS & INSTRUCTIONS\n       Form 1040\n        Individual Income Tax Return \n       Form 1040 Instructions\n        Instructions for Form 1040 \n       Form W-9\n        Request for Taxpayer Identification Number (TIN) and Certification \n       Form 4506-T\n        Request for Transcript of Tax Return [...] Overview\n   POPULAR FORMS & INSTRUCTIONS\n   Form 1040\n   Form 1040 Instructions\n   Form W-9 and Certification\")\n   Form 4506-T\n   Form W-4\n   Form 941\n   Form W-2\n   Form 9465\n   POPULAR FOR TAX PROS\n   Form 1040-X\n   Form 2848\n   Form W-7\n   Circular 230\n\nMain navigation\n---------------\n\n   File\n   Pay\n   Refunds\n   Credits & Deductions\n   Forms & Instructions\n\nInfo Menu Mobile\n---------------- [...] Form W-4\n        Employee's Withholding Certificate \n       Form 941\n        Employer's Quarterly Federal Tax Return \n       Form W-2\n        Wage and Tax Statement \n       Form 9465\n        Installment Agreement Request \n\n       POPULAR FOR TAX PROS\n       Form 1040-X\n        Amended Individual Income Tax Return \n       Form 2848\n        Power of Attorney \n       Form W-7\n        Apply for an ITIN \n       Circular 230\n        Regulations Governing Practice before the IRS \n\nSearch",
+      "score": 0.46672463,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/filing/individuals/how-to-file",
+      "title": "File your tax return | Internal Revenue Service",
+      "content": "Forms & Instructions\n    \n\n       Overview\n\n       POPULAR FORMS & INSTRUCTIONS\n       Form 1040\n        Individual Income Tax Return \n       Form 1040 Instructions\n        Instructions for Form 1040 \n       Form W-9\n        Request for Taxpayer Identification Number (TIN) and Certification \n       Form 4506-T\n        Request for Transcript of Tax Return [...] Overview\n   POPULAR FORMS & INSTRUCTIONS\n   Form 1040\n   Form 1040 Instructions\n   Form W-9 and Certification\")\n   Form 4506-T\n   Form W-4\n   Form 941\n   Form W-2\n   Form 9465\n   POPULAR FOR TAX PROS\n   Form 1040-X\n   Form 2848\n   Form W-7\n   Circular 230\n\nMain navigation\n---------------\n\n   File\n   Pay\n   Refunds\n   Credits & Deductions\n   Forms & Instructions\n\nInfo Menu Mobile\n---------------- [...] Form W-4\n        Employee's Withholding Certificate \n       Form 941\n        Employer's Quarterly Federal Tax Return \n       Form W-2\n        Wage and Tax Statement \n       Form 9465\n        Installment Agreement Request \n\n       POPULAR FOR TAX PROS\n       Form 1040-X\n        Amended Individual Income Tax Return \n       Form 2848\n        Power of Attorney \n       Form W-7\n        Apply for an ITIN \n       Circular 230\n        Regulations Governing Practice before the IRS \n\nSearch",
+      "score": 0.45885846,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/instructions/i1040ss",
+      "title": "Instructions for Form 1040-SS (2024) | Internal Revenue Service",
+      "content": "You will need the Instructions for Schedules C, F, and SE. Throughout these instructions, you are directed to go to the Instructions for Schedule C (Form 1040), Schedule F (Form 1040), or Schedule SE (Form 1040) for details on how to complete a line. But, in most instances, you will need to look at whether you must take exceptions into consideration when applying those instructions. [...] For more information on this election, see the Instructions for Schedule E (Form 1040). [...] 501.",
+      "score": 0.44927242,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/forms-instructions",
+      "title": "Forms & instructions | Internal Revenue Service",
+      "content": "Forms & Instructions\n    \n\n       Overview\n\n       POPULAR FORMS & INSTRUCTIONS\n       Form 1040\n        Individual Income Tax Return \n       Form 1040 Instructions\n        Instructions for Form 1040 \n       Form W-9\n        Request for Taxpayer Identification Number (TIN) and Certification \n       Form 4506-T\n        Request for Transcript of Tax Return [...] Overview\n   POPULAR FORMS & INSTRUCTIONS\n   Form 1040\n   Form 1040 Instructions\n   Form W-9 and Certification\")\n   Form 4506-T\n   Form W-4\n   Form 941\n   Form W-2\n   Form 9465\n   POPULAR FOR TAX PROS\n   Form 1040-X\n   Form 2848\n   Form W-7\n   Circular 230\n\nMain navigation\n---------------\n\n   File\n   Pay\n   Refunds\n   Credits & Deductions\n   Forms & Instructions\n\nInfo Menu Mobile\n---------------- [...] Instructions for Form 1040 PDF\")(including Schedules 1, 2, and 3) \n       Form 1040 Schedule 1 PDF              (PDF)\")\n       Form 1040 Schedule 2 PDF              (PDF)\")\n       Form 1040 Schedule 3 PDF              (PDF)\")\n\n   Tax Table from Instructions for Form 1040 PDF              (PDF)\")\n   Schedules for Form 1040\n   Form 1040-SR PDF\")\n\nForm W-4\n\n Employee's Withholding Certificate\n\n Complete Form W-4 so that your employer can withhold the correct federal income tax from your pay.",
+      "score": 0.44492707,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/forms-pubs/about-form-1040",
+      "title": "About Form 1040, U.S. Individual Income Tax Return - IRS",
+      "content": "An official website of the United States Government\n\nHome\nHome\n\n## Information Menu\n\n## Main navigation\n\nHome\n\n## Information Menu\n\n## File\n\n## Pay\n\n## Refunds\n\n## Credits & Deductions\n\n## Forms & Instructions\n\n## Main navigation\n\n## Info Menu Mobile\n\n# About Form 1040, U.S. Individual Income Tax Return\n\n### More In Forms and Instructions\n\nForm 1040 is used by U.S. taxpayers to file an annual income tax return. [...] Form 1040-SR is available as an optional alternative to using Form 1040 for taxpayers who are age 65 or older. Form 1040-SR uses the same schedules and instructions as Form 1040 does.\n\n## Current revision\n\nForm 1040 PDF\") | Form 1040-SR PDF\")\n\nInstructions for Form 1040 and Form 1040-SR\") (Print version PDF\") | eBook EPUB\")) [...] Below is a general guide to what Schedule(s) you will need to file. (See the instructions for Form 1040 for more information on the numbered schedules.) For Schedule A and the other lettered schedules, see Schedules for Form 1040.\n\n#### Schedule 1 (Form 1040), Additional Income and Adjustments to Income\n\nUSE IF ...",
+      "score": 0.4430467,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.irs.gov/e-file-providers/free-file-fillable-forms-program-limitations-and-available-forms",
+      "title": "Free File Fillable Forms: Program limitations and available forms - IRS",
+      "content": "Forms & Instructions\n------------------------------------------------------------------------------------------------------------------------------\n\n   Overview\n   POPULAR FORMS & INSTRUCTIONS\n   Form 1040\n   Form 1040 Instructions\n   Form W-9 and Certification\")\n   Form 4506-T\n   Form W-4\n   Form 941\n   Form W-2\n   Form 9465\n   POPULAR FOR TAX PROS\n   Form 1040-X\n   Form 2848\n   Form W-7\n   Circular 230\n\nMain navigation\n--------------- [...] POPULAR FORMS & INSTRUCTIONS\n       Form 1040\n        Individual Income Tax Return \n       Form 1040 Instructions\n        Instructions for Form 1040 \n       Form W-9\n        Request for Taxpayer Identification Number (TIN) and Certification \n       Form 4506-T\n        Request for Transcript of Tax Return [...] | Form number | Form name | Available |\n| --- | --- | --- |\n| Form 1040 | U.S. Individual Income Tax Return - Known Limitations Line-by-Line instructions are available | 01/27/2025 |\n| Form 1040-V | Payment Voucher (Print Only - Cannot e-file) | 01/27/2025 |\n| Form 1040-ES | Estimated Tax Payments (Print Only - Cannot e-file) Line-by-Line instructions are available | 01/27/2025 |\n| Form 1040-SR | U.S. Tax Return for Seniors – Known Limitations | Not Supported (Use Form 1040) |",
+      "score": 0.43611822,
+      "raw_content": null
+    }
+  ],
+  "response_time": 4.94
+}
