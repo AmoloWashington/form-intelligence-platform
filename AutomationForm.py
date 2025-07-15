@@ -18,7 +18,7 @@ import base64
 
 # Initialize APIs
 def init_apis():
-    """Initialize OpenAI and Tavily APIs with better error handling"""
+    """Initialize OpenAI and Tavily APIs with improved error handling for quota issues"""
     try:
         # Initialize OpenAI client (new v1+ API)
         openai_api_key = None
@@ -63,7 +63,7 @@ def init_apis():
         # Initialize OpenAI client
         openai_client = OpenAI(api_key=openai_api_key)
         
-        # Test OpenAI connection
+        # Test OpenAI connection with improved error handling
         try:
             test_response = openai_client.chat.completions.create(
                 model="gpt-3.5-turbo",
@@ -72,8 +72,23 @@ def init_apis():
             )
             st.success("✅ OpenAI API connection successful")
         except Exception as e:
-            st.error(f"❌ OpenAI API test failed: {str(e)}")
-            return None, None
+            error_str = str(e)
+            if "429" in error_str or "quota" in error_str.lower() or "insufficient_quota" in error_str.lower():
+                st.warning("⚠️ OpenAI API quota exceeded. The application will continue with limited functionality.")
+                st.info("💡 To restore full functionality, please check your OpenAI billing and upgrade your plan if needed.")
+                # Return the client anyway - it might work for actual requests
+                return openai_client, tavily_api_key
+            elif "401" in error_str or "unauthorized" in error_str.lower():
+                st.error("❌ OpenAI API key is invalid or unauthorized")
+                return None, None
+            elif "403" in error_str or "forbidden" in error_str.lower():
+                st.error("❌ OpenAI API access forbidden. Please check your API key permissions.")
+                return None, None
+            else:
+                st.warning(f"⚠️ OpenAI API test failed: {error_str}")
+                st.info("The application will continue - the API might work for actual requests.")
+                # Return the client anyway - the test might fail but actual requests might work
+                return openai_client, tavily_api_key
         
         st.success("✅ Tavily API key loaded successfully")
         
@@ -219,7 +234,7 @@ def log_tavily_response(form_name, response_data):
         st.warning(f"Failed to log Tavily response: {str(e)}")
 
 def extract_form_data(form_name, tavily_results, openai_client):
-    """Use OpenAI to extract structured form data from Tavily results"""
+    """Use OpenAI to extract structured form data from Tavily results with improved error handling"""
     try:
         # Prepare the search results text
         search_text = ""
@@ -286,18 +301,32 @@ def extract_form_data(form_name, tavily_results, openai_client):
         Return ONLY the JSON object, no other text:
         """
         
-        response = openai_client.chat.completions.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": "You are a comprehensive form intelligence extraction expert who captures EVERY field on a form. Always return valid JSON with complete field information."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0.1,
-            max_tokens=3000  # Increased for more comprehensive extraction
-        )
-        
-        # Extract and parse the JSON response
-        json_text = response.choices[0].message.content.strip()
+        try:
+            response = openai_client.chat.completions.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "You are a comprehensive form intelligence extraction expert who captures EVERY field on a form. Always return valid JSON with complete field information."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.1,
+                max_tokens=3000  # Increased for more comprehensive extraction
+            )
+            
+            # Extract and parse the JSON response
+            json_text = response.choices[0].message.content.strip()
+            
+        except Exception as e:
+            error_str = str(e)
+            if "429" in error_str or "quota" in error_str.lower():
+                st.error("❌ OpenAI API quota exceeded. Cannot extract form data.")
+                st.info("💡 Please check your OpenAI billing and upgrade your plan to continue.")
+                return create_empty_form_data(form_name)
+            elif "401" in error_str:
+                st.error("❌ OpenAI API unauthorized. Please check your API key.")
+                return create_empty_form_data(form_name)
+            else:
+                st.error(f"❌ OpenAI API error: {error_str}")
+                return create_empty_form_data(form_name)
         
         # Log the LLM response
         log_llm_response(form_name, "extraction", json_text)
@@ -346,7 +375,7 @@ def create_empty_form_data(form_name):
     return form_data
 
 def validate_form_data(form_data, openai_client):
-    """Use OpenAI to validate and audit the form data"""
+    """Use OpenAI to validate and audit the form data with improved error handling"""
     try:
         prompt = f"""
         You are a comprehensive form validation expert. Review the following form metadata and identify any issues:
@@ -382,22 +411,39 @@ def validate_form_data(form_data, openai_client):
         Return ONLY the JSON object:
         """
         
-        response = openai_client.chat.completions.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": "You are a thorough form validation expert who ensures ALL fields are captured. Always return valid JSON."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0.1,
-            max_tokens=1500
-        )
-        
-        validation_result = json.loads(response.choices[0].message.content.strip())
-        
-        # Log validation response
-        log_llm_response(form_data["form_name"], "validation", response.choices[0].message.content)
-        
-        return validation_result
+        try:
+            response = openai_client.chat.completions.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "You are a thorough form validation expert who ensures ALL fields are captured. Always return valid JSON."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.1,
+                max_tokens=1500
+            )
+            
+            validation_result = json.loads(response.choices[0].message.content.strip())
+            
+            # Log validation response
+            log_llm_response(form_data["form_name"], "validation", response.choices[0].message.content)
+            
+            return validation_result
+            
+        except Exception as e:
+            error_str = str(e)
+            if "429" in error_str or "quota" in error_str.lower():
+                st.error("❌ OpenAI API quota exceeded. Cannot validate form data.")
+                st.info("💡 Please check your OpenAI billing and upgrade your plan to continue.")
+                return {
+                    "validation_passed": False,
+                    "issues_found": [{"field": "system", "issue": "Validation unavailable due to API quota limits", "severity": "high", "suggestion": "Manual review required"}],
+                    "overall_assessment": "Validation system unavailable due to API quota limits",
+                    "completeness_score": 0,
+                    "total_fields_found": len(form_data.get("all_fields", [])),
+                    "missing_fields_likely": []
+                }
+            else:
+                raise e
         
     except Exception as e:
         st.error(f"Error validating form data: {str(e)}")
@@ -406,7 +452,7 @@ def validate_form_data(form_data, openai_client):
             "issues_found": [{"field": "system", "issue": f"Validation failed: {str(e)}", "severity": "high", "suggestion": "Manual review required"}],
             "overall_assessment": "Validation system error",
             "completeness_score": 0,
-            "total_fields_found": 0,
+            "total_fields_found": len(form_data.get("all_fields", [])),
             "missing_fields_likely": []
         }
 
@@ -1223,15 +1269,28 @@ def main():
     # Ensure directories exist
     ensure_directories()
     
-    # Initialize APIs
+    # Initialize APIs with improved error handling
     openai_client, tavily_api_key = init_apis()
     
     if not openai_client or not tavily_api_key:
         st.error("❌ Failed to initialize APIs. Please check your API keys.")
+        st.info("💡 Make sure your secrets.toml file contains valid API keys and you have sufficient quota.")
         st.stop()
     
     # Sidebar navigation
     st.sidebar.title("📋 Form Intelligence Platform")
+    
+    # Add API status indicator
+    st.sidebar.subheader("🔌 API Status")
+    if openai_client:
+        st.sidebar.success("✅ OpenAI Connected")
+    else:
+        st.sidebar.error("❌ OpenAI Disconnected")
+    
+    if tavily_api_key:
+        st.sidebar.success("✅ Tavily Connected")
+    else:
+        st.sidebar.error("❌ Tavily Disconnected")
     
     # Navigation menu
     if st.session_state.editing_form:
@@ -1304,7 +1363,7 @@ def main():
         
         st.markdown("""
         ## 🎯 Purpose
-        The Form Intelligence Platform is an AI-powered tool designed to automatically extract, validate, and manage **comprehensive information** about various forms and documents, capturing **ALL fields** whether required or optional.
+        The Form Intelligence Platform is an AI-powered tool designed to automatically extract,validate, and manage **comprehensive information** about various forms and documents, capturing **ALL fields** whether required or optional.
         
         ## 🚀 Features
         - **🔍 Complete Field Extraction**: Captures ALL fields from forms - required, optional, and everything in between
